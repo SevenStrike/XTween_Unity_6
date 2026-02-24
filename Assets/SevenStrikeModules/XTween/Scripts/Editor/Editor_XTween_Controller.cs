@@ -20,9 +20,7 @@
  */
 namespace SevenStrikeModules.XTween.Editor
 {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
     using TMPro;
-#endif
     using UnityEditor;
     using UnityEngine;
     using UnityEngine.UI;
@@ -36,15 +34,7 @@ namespace SevenStrikeModules.XTween.Editor
         /// <summary>
         /// 序列化属性
         /// </summary>
-        private SerializedProperty sp_Duration, sp_Delay, sp_UseRandomDelay, sp_RandomDelay, sp_EaseMode, sp_UseCurve, sp_Curve, sp_LoopCount, sp_LoopDelay, sp_LoopType, sp_IsFromMode, sp_IsRelative, sp_IsAutoKill, sp_EndValue_String, sp_EndValue_Int, sp_EndValue_Float, sp_EndValue_Vector2, sp_EndValue_Vector3, sp_EndValue_Vector4, sp_EndValue_Color, sp_EndValue_Quaternion, sp_FromValue_Int, sp_FromValue_Float, sp_FromValue_String, sp_FromValue_Vector2, sp_FromValue_Vector3, sp_FromValue_Vector4, sp_FromValue_Color, sp_FromValue_Quaternion, sp_Target_PathTool, sp_TweenTypes, sp_TweenTypes_Positions, sp_TweenTypes_Rotations, sp_TweenTypes_Alphas, sp_TweenTypes_Shakes, sp_TweenTypes_Text, sp_TweenTypes_To, sp_index_TweenTypes, sp_index_TweenTypes_Positions, sp_index_TweenTypes_Rotations, sp_index_TweenTypes_Alphas, sp_index_TweenTypes_Shakes, sp_index_TweenTypes_Text, sp_index_TweenTypes_To, sp_Target_RectTransform, sp_Target_Image, sp_Target_CanvasGroup, sp_Target_Text, sp_Target_Int, sp_Target_Float, sp_Target_String, sp_Target_Vector2, sp_Target_Vector3, sp_Target_Vector4, sp_Target_Color, sp_index_AutoKillPreviewTweens, sp_index_RewindPreviewTweensWithKill, sp_index_ClearPreviewTweensWithKill, sp_keyControl_Tween_Play, sp_keyControl_Tween_Rewind, sp_keyControl_Tween_Pause_Resume, sp_keyControl_Tween_Kill, sp_keyControl_Tween_Replay, sp_keyControl_Enabled, sp_keyControl_Tween_Create, sp_DebugMode, sp_IsExtendedString, sp_TextCursor, sp_CursorBlinkTime, sp_RotateMode, sp_RotationMode, sp_Vibrato, sp_Randomness, sp_FadeShake, sp_AutoStart, sp_index_TweenTypes_Rotation_Space, sp_AnimateSpace;
-
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
-        // TMPro 相关 - 需要条件编译
-        private SerializedProperty
-            sp_Target_TmpText,                    // ← TMPro组件
-            sp_TweenTypes_TmpText,                 // ← TMPro动画类型
-            sp_index_TweenTypes_TmpText;            // ← TMPro索引
-#endif
+        private SerializedProperty sp_Duration, sp_Delay, sp_UseRandomDelay, sp_RandomDelay, sp_EaseMode, sp_UseCurve, sp_Curve, sp_LoopCount, sp_LoopDelay, sp_LoopType, sp_IsFromMode, sp_IsRelative, sp_IsAutoKill, sp_EndValue_String, sp_EndValue_Int, sp_EndValue_Float, sp_EndValue_Vector2, sp_EndValue_Vector3, sp_EndValue_Vector4, sp_EndValue_Color, sp_EndValue_Quaternion, sp_FromValue_Int, sp_FromValue_Float, sp_FromValue_String, sp_FromValue_Vector2, sp_FromValue_Vector3, sp_FromValue_Vector4, sp_FromValue_Color, sp_FromValue_Quaternion, sp_Target_PathTool, sp_TweenTypes, sp_TweenTypes_Positions, sp_TweenTypes_Rotations, sp_TweenTypes_Alphas, sp_TweenTypes_Shakes, sp_TweenTypes_Text, sp_TweenTypes_To, sp_index_TweenTypes, sp_index_TweenTypes_Positions, sp_index_TweenTypes_Rotations, sp_index_TweenTypes_Alphas, sp_index_TweenTypes_Shakes, sp_index_TweenTypes_Text, sp_index_TweenTypes_To, sp_Target_RectTransform, sp_Target_Image, sp_Target_CanvasGroup, sp_Target_Text, sp_Target_Int, sp_Target_Float, sp_Target_String, sp_Target_Vector2, sp_Target_Vector3, sp_Target_Vector4, sp_Target_Color, sp_index_AutoKillPreviewTweens, sp_index_RewindPreviewTweensWithKill, sp_index_ClearPreviewTweensWithKill, sp_keyControl_Tween_Play, sp_keyControl_Tween_Rewind, sp_keyControl_Tween_Pause_Resume, sp_keyControl_Tween_Kill, sp_keyControl_Tween_Replay, sp_keyControl_Enabled, sp_keyControl_Tween_Create, sp_DebugMode, sp_IsExtendedString, sp_TextCursor, sp_CursorBlinkTime, sp_RotateMode, sp_RotationMode, sp_Vibrato, sp_Randomness, sp_FadeShake, sp_AutoStart, sp_index_TweenTypes_Rotation_Space, sp_AnimateSpace, sp_Target_TmpText, sp_TweenTypes_TmpText, sp_index_TweenTypes_TmpText;
 
         /// <summary>
         /// 图标
@@ -182,9 +172,7 @@ namespace SevenStrikeModules.XTween.Editor
             sp_TweenTypes_Alphas = serializedObject.FindProperty("TweenTypes_Alphas");
             sp_TweenTypes_Shakes = serializedObject.FindProperty("TweenTypes_Shakes");
             sp_TweenTypes_Text = serializedObject.FindProperty("TweenTypes_Text");
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             sp_TweenTypes_TmpText = serializedObject.FindProperty("TweenTypes_TmpText");
-#endif
 
             sp_TweenTypes_To = serializedObject.FindProperty("TweenTypes_To");
 
@@ -194,9 +182,7 @@ namespace SevenStrikeModules.XTween.Editor
             sp_index_TweenTypes_Alphas = serializedObject.FindProperty("index_TweenTypes_Alphas");
             sp_index_TweenTypes_Shakes = serializedObject.FindProperty("index_TweenTypes_Shakes");
             sp_index_TweenTypes_Text = serializedObject.FindProperty("index_TweenTypes_Text");
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             sp_index_TweenTypes_TmpText = serializedObject.FindProperty("index_TweenTypes_TmpText");
-#endif
 
             sp_index_TweenTypes_To = serializedObject.FindProperty("index_TweenTypes_To");
 
@@ -204,9 +190,7 @@ namespace SevenStrikeModules.XTween.Editor
             sp_Target_Image = serializedObject.FindProperty("Target_Image");
             sp_Target_CanvasGroup = serializedObject.FindProperty("Target_CanvasGroup");
             sp_Target_Text = serializedObject.FindProperty("Target_Text");
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             sp_Target_TmpText = serializedObject.FindProperty("Target_TmpText");
-#endif
             sp_Target_Int = serializedObject.FindProperty("Target_Int");
             sp_Target_Float = serializedObject.FindProperty("Target_Float");
             sp_Target_String = serializedObject.FindProperty("Target_String");
@@ -786,9 +770,8 @@ namespace SevenStrikeModules.XTween.Editor
             #region TmpText属性
             if (TweenTypes == XTweenTypes.文字_TmpText)
             {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
                 actionlist = System.Enum.GetNames(typeof(XTweenTypes_TmpText));
-                Editor_XTween_GUI.Gui_Layout_Popup<string, XTween_Controller>("TmpText属性", actionlist, ref sp_index_TweenTypes_TmpText, GUIFilled.实体, 120, 22, SelectedObjects, (comps) =>
+                Editor_XTween_GUI.Gui_Layout_Popup<string, XTween_Controller>("TmpText属性", actionlist, ref sp_index_TweenTypes_TmpText, XTweenGUIFilled.实体, 120, 22, SelectedObjects, (comps) =>
                 {
                     for (int i = 0; i < SelectedObjects.Length; i++)
                     {
@@ -802,7 +785,6 @@ namespace SevenStrikeModules.XTween.Editor
                     // 内部已处理TMPro的条件编译
                     GetComponents();
                 });
-#endif
             }
             #endregion
 
@@ -828,9 +810,7 @@ namespace SevenStrikeModules.XTween.Editor
             TweenTypes_Alphas = (XTweenTypes_Alphas)sp_TweenTypes_Alphas.enumValueIndex;
             TweenTypes_Shakes = (XTweenTypes_Shakes)sp_TweenTypes_Shakes.enumValueIndex;
             TweenTypes_Text = (XTweenTypes_Text)sp_TweenTypes_Text.enumValueIndex;
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             TweenTypes_TmpText = (XTweenTypes_TmpText)sp_TweenTypes_TmpText.enumValueIndex;
-#endif
             TweenTypes_To = (XTweenTypes_To)sp_TweenTypes_To.enumValueIndex;
 
             Editor_XTween_GUI.Gui_Layout_Space(10);
@@ -1094,13 +1074,11 @@ namespace SevenStrikeModules.XTween.Editor
                 }
                 if (TweenTypes == XTweenTypes.文字_TmpText)
                 {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
                     Editor_XTween_GUI.Gui_Layout_Space(5);
                     Editor_XTween_GUI.StatuDisplayer_Object(null, 12, new Vector2(0, 1), "目标 TmpText", 12, new Vector2(0, -7), icon_status, new Vector2(0, 3), sp_Target_TmpText.objectReferenceValue == null ? false : true, XTween_Dashboard.Theme_Primary, Color.black * 0.7f, sp_Target_TmpText, false);
 
                     if (sp_Target_TmpText.objectReferenceValue == null)
                         EditorGUILayout.HelpBox("该TmpText为你需要动画化的Tmp文字组件！不可为空！", MessageType.Warning);
-#endif
                 }
                 #endregion
                 Editor_XTween_GUI.Gui_Layout_Space(5);
@@ -1456,14 +1434,12 @@ namespace SevenStrikeModules.XTween.Editor
                 if (sp_Target_Text.objectReferenceValue == null)
                     sp_Target_Text.objectReferenceValue = m_Text;
             }
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             TextMeshProUGUI m_TmpText = BaseScript.GetComponent<TextMeshProUGUI>();
             if (m_TmpText)
             {
                 if (sp_Target_TmpText.objectReferenceValue == null)
                     sp_Target_TmpText.objectReferenceValue = m_TmpText;
             }
-#endif
 
             // 应用保存所有组件
             sp_Target_PathTool.serializedObject.ApplyModifiedProperties();
@@ -1471,9 +1447,7 @@ namespace SevenStrikeModules.XTween.Editor
             sp_Target_Image.serializedObject.ApplyModifiedProperties();
             sp_Target_CanvasGroup.serializedObject.ApplyModifiedProperties();
             sp_Target_Text.serializedObject.ApplyModifiedProperties();
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             sp_Target_TmpText.serializedObject.ApplyModifiedProperties();
-#endif
         }
         /// <summary>
         /// 获取缓动参数曲线图
@@ -1504,13 +1478,11 @@ namespace SevenStrikeModules.XTween.Editor
 
             if (TweenTypes == XTweenTypes.文字_TmpText)
             {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
                 if (sp_Target_TmpText.objectReferenceValue == null)
                 {
                     valid = false;
                     Editor_XTween_GUI.Open(XTweenDialogType.警告, "XTween动画控制器消息", "文字组件异常", $"检测到您未正确指定对应动画所需要的\"<color={hexcol}>  TmpText </color>\"组件! ，请正确指定后再预览！", "明白", 0, false);
                 }
-#endif
             }
             if (TweenTypes == XTweenTypes.文字_Text)
             {

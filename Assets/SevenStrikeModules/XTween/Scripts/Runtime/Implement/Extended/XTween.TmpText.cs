@@ -20,14 +20,11 @@
  */
 namespace SevenStrikeModules.XTween
 {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
     using TMPro;
-#endif
     using UnityEngine;
 
     public static partial class XTween
     {
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
         /// <summary>
         /// 创建一个TextMeshProUGUI从当前字体大小到目标大小的动画
         /// 支持相对变化和自动销毁
@@ -1787,6 +1784,5 @@ namespace SevenStrikeModules.XTween
                 return tweener;
             }
         }
-#endif
     }
 }

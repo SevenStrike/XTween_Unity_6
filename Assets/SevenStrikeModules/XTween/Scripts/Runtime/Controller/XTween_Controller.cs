@@ -21,9 +21,7 @@
 namespace SevenStrikeModules.XTween
 {
     using System;
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
     using TMPro;
-#endif
     using UnityEngine;
     using UnityEngine.UI;
     using Random = UnityEngine.Random;
@@ -480,9 +478,7 @@ namespace SevenStrikeModules.XTween
         [SerializeField] public Image Target_Image;
         [SerializeField] public CanvasGroup Target_CanvasGroup;
         [SerializeField] public Text Target_Text;
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
         [SerializeField] public TextMeshProUGUI Target_TmpText;
-#endif
         [SerializeField] public XTween_PathTool Target_PathTool;
         #endregion
 
@@ -608,7 +604,6 @@ namespace SevenStrikeModules.XTween
                         XTween_Utilitys.DebugInfo("XTween控制器消息", $"已找到组件：{m_Text}  ！", XTweenGUIMsgState.确认);
                 }
             }
-#if TMPro_PRESENT || UNITEXTMESHPRO_PRESENT
             TextMeshProUGUI m_TmpText = GetComponent<TextMeshProUGUI>();
             if (m_TmpText)
             {
@@ -616,10 +611,9 @@ namespace SevenStrikeModules.XTween
                 {
                     Target_TmpText = m_TmpText;
                     if (DebugMode)
-                        XTween_Utilitys.DebugInfo("XTween控制器消息", $"已找到组件：{m_TmpText}  ！", GUIMsgState.确认);
+                        XTween_Utilitys.DebugInfo("XTween控制器消息", $"已找到组件：{m_TmpText}  ！", XTweenGUIMsgState.确认);
                 }
             }
-#endif
         }
         #endregion
 

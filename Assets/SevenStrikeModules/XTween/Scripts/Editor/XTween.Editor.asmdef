@@ -1,10 +1,11 @@
-{
+﻿{
     "name": "XTween.Editor",
     "rootNamespace": "SevenStrikeModules.XTween.Editor",
     "references": [
         "XTween.Runtime",
         "UnityEditor.CoreModule",
         "UnityEditor.UI",
+        "Unity.TextMeshPro",
         "UnityEngine.IMGUIModule"
     ],
     "includePlatforms": [
