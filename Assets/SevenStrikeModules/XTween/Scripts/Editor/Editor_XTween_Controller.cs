@@ -614,6 +614,8 @@ namespace SevenStrikeModules.XTween.Editor
 
                     string presetdata = "presetdata";
                     Debug.Log(res + presetdata);
+                    // 提取当前控制器的动画参数到数据类以便传递给预设管理器保存
+                    //XTween_PresetManager.SaveTo(presetdata,);
                 };
             }
             if (Editor_XTween_GUI.Gui_Layout_Button("读取", "读取预设参数到当前动画", XTweenGUIFilled.实体, XTweenGUIColor.亮白, Color.black, 25))

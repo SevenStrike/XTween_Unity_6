@@ -10,7 +10,7 @@ namespace SevenStrikeModules.XTween
     [Serializable]
     public class XTweenPresetBase
     {
-        public string PresetName;
+        public string Name;
         public string Description;
         public float Duration = 1f;
         public float Delay = 0f;
@@ -24,6 +24,16 @@ namespace SevenStrikeModules.XTween
         public XTween_LoopType LoopType = XTween_LoopType.Restart;
         public bool IsRelative = false;
         public bool IsAutoKill = false;
+
+        public void Set_PresetName(string name)
+        {
+            this.Name = name;
+        }
+
+        public void Set_Preset_Description(string des)
+        {
+            this.Description = des;
+        }
     }
 
     /// <summary>
